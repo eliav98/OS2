@@ -2,7 +2,7 @@
 // Created by noga on 02-Jun-24.
 //
 
-#include "ThreadManager.h"
+#include "../include/ThreadManager.h"
 
 int get_quantums(int tid)
 {

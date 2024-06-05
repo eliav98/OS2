@@ -2,6 +2,14 @@
 // Created by noga on 02-Jun-24.
 //
 
+#include <stdio.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <unistd.h>
+#include <sys/time.h>
+#include <stdbool.h>
+
+
 #ifndef _THREADMANAGER_H_
 #define _THREADMANAGER_H_
 
@@ -11,7 +19,9 @@ class ThreadManager
 {
     int num_threads;
     int total_quantums; //?
-    Thread threads[MAX_THREAD_NUM];
+    sigjmp_buf thread_envs[2];
+
+//  Thread threads[MAX_THREAD_NUM];
 };
 
 /** Returns the thread ID of the calling thread. */

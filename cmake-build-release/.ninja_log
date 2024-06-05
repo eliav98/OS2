@@ -1,0 +1,4 @@
+# ninja log v5
+1	44	0	ex2.exe	df49c01ef7a93d76
+2	140	1717595060367559400	CMakeFiles/ex2.dir/src/Thread.cpp.o	47a31dea2731ce07
+28	758	1717595238439823100	CMakeFiles/ex2.dir/src/main.cpp.o	a5186211695571c5
