@@ -1,23 +1,52 @@
-//
-// Created by noga on 02-Jun-24.
-//
+#include <setjmp.h>
+#include <iostream>
 
-#include "../include/Thread.h"
+#define STACK_SIZE 4096
 
-class ThreadManager
-{
-  int num_threads;
-  int total_quantums; //?
-  sigjmp_buf thread_envs[2];
+typedef void (*thread_entry_point)(void);
 
-//  Thread threads[MAX_THREAD_NUM];
+class Thread {
+ public:
+  enum State { READY, RUNNING, BLOCKED };
+
+  Thread(int id, thread_entry_point entry_point);
+  ~Thread();
+
+  void saveContext();
+  void loadContext();
+  int getId() const;
+  State getState() const;
+  void setState(State state);
+
+ private:
+  int id;
+  sigjmp_buf context;
+  char stack[STACK_SIZE];
+  State state;
+  thread_entry_point entry_point;
 };
 
-/** Returns the thread ID of the calling thread. */
-int get_tid();
+Thread::Thread(int id, thread_entry_point entry_point)
+    : id(id), entry_point(entry_point), state(READY) {}
 
-/** Returns the number of quantums the thread with ID tid was in RUNNING state */
-int get_quantums(int tid);
+Thread::~Thread() {}
 
-/** Returns the total number of quantums since the library was initialized, including the current quantum. */
-int get_total_quantums();
+void Thread::saveContext() {
+  sigsetjmp(context, 1);
+}
+
+void Thread::loadContext() {
+  siglongjmp(context, 1);
+}
+
+int Thread::getId() const {
+  return id;
+}
+
+Thread::State Thread::getState() const {
+  return state;
+}
+
+void Thread::setState(State state) {
+  this->state = state;
+}

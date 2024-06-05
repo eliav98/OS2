@@ -1,4 +1,11 @@
 # ninja log v5
+30	967	1717596841817542000	CMakeFiles/ex2.dir/src/ThreadManager.cpp.o	b06cff75bd4ff80f
+7	1043	1717596903856912400	CMakeFiles/ex2.dir/src/main.cpp.o	a5186211695571c5
+7	920	1717596841783302000	CMakeFiles/ex2.dir/src/Thread.cpp.o	47a31dea2731ce07
+33	1044	1717596903853913200	CMakeFiles/ex2.dir/src/uthreads.cpp.o	2b0e5cfa5ede6529
 1	44	0	ex2.exe	df49c01ef7a93d76
-2	140	1717595060367559400	CMakeFiles/ex2.dir/src/Thread.cpp.o	47a31dea2731ce07
-28	758	1717595238439823100	CMakeFiles/ex2.dir/src/main.cpp.o	a5186211695571c5
+3	212	1717597252947559100	build.ninja	8634595e791ad135
+46	849	1717597253848117100	CMakeFiles/ex2.dir/src/Thread.cpp.o	356ed7dbf9075b2b
+68	958	1717597253957011400	CMakeFiles/ex2.dir/src/ThreadManager.cpp.o	233bd797d1827ae5
+7	972	1717597253970262500	CMakeFiles/ex2.dir/src/main.cpp.o	bbbfe072c1d53e17
+27	973	1717597253970262500	CMakeFiles/ex2.dir/src/uthreads.cpp.o	8acb5702aaf9c752
