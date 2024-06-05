@@ -1,10 +1,4 @@
 C:\Users\eliav\AppData\Local\JetBrains\CLion2023.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/cygdrive/d/Program Files/JetBrains/CLion 2023.1.1/bin/ninja/cygwin/x64/ninja.exe" -G Ninja -S /cygdrive/d/eliav/CLionProjects/OS2/ex2 -B /cygdrive/d/eliav/CLionProjects/OS2/ex2/cmake-build-debug
--- The CXX compiler identification is GNU 10.2.0
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /cygdrive/d/eliav/CLionProjects/OS2/ex2/cmake-build-debug

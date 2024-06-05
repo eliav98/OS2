@@ -1,27 +1,23 @@
 cmake_minimum_required(VERSION 3.25)
 project(ex2 CXX)
 
-# Set the C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Optionally set the build type (Release or Debug)
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-# Include directories
-include_directories(src)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
-# Add individual source files to avoid multiple definitions
-add_executable(ex2
-        src/main.cpp
-        src/uthreads.cpp
-        src/Thread.cpp
-        src/ThreadManager.cpp
-        )
+file(GLOB SOURCES "src/*.cpp")
 
-# Set different compile options based on the build type
+if (SOURCES)
+    add_executable(ex2 ${SOURCES})
+else()
+    message(FATAL_ERROR "No source files found. Please check your directory structure.")
+endif()
+
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 

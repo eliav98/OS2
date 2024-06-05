@@ -37,19 +37,19 @@ address_t translate_address(address_t addr) {
 }
 #endif
 
-#include "Thread.cpp"
-#include "ThreadManager.cpp"
+#include "thread_manager.h"
 
 ThreadManager* threadManager = nullptr;
 
-// void setup_thread(int tid, char* stack, thread_entry_point entry_point) {
-//     address_t sp = (address_t)stack + STACK_SIZE - sizeof(address_t);
-//     address_t pc = (address_t)entry_point;
-//     sigsetjmp(env[tid], 1);
-//     (env[tid]->__jmpbuf)[JB_SP] = translate_address(sp);
-//     (env[tid]->__jmpbuf)[JB_PC] = translate_address(pc);
-//     sigemptyset(&env[tid]->__saved_mask);
-// }
+ void setup_thread(int tid, char* stack, thread_entry_point entry_point) {
+     address_t sp = (address_t)stack + STACK_SIZE - sizeof(address_t);
+     address_t pc = (address_t)entry_point;
+     Thread *thread = new Thread(tid, entry_point);
+     sigsetjmp(env[tid], 1);
+     (env[tid]->__jmpbuf)[JB_SP] = translate_address(sp);
+     (env[tid]->__jmpbuf)[JB_PC] = translate_address(pc);
+     sigemptyset(&env[tid]->__saved_mask);
+ }
 
 int uthread_init(int quantum_usecs) {
   if (quantum_usecs <= 0) {
@@ -62,6 +62,7 @@ int uthread_init(int quantum_usecs) {
       std::cerr << "system error: Memory allocation failed\n";
       return -1;
     }
+
 
   // Setup the main thread (tid = 0)
   // setup_thread(MAIN_THREAD_ID, nullptr, nullptr);

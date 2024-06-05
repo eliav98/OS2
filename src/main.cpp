@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ThreadManager.cpp"  // Include the ThreadManager class directly
+#include "thread_manager.h"  // Include the ThreadManager class directly
 
 int main() {
 //  ThreadManager manager;

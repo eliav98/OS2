@@ -52,28 +52,28 @@ build cmake_object_order_depends_target_ex2: phony || CMakeFiles/ex2.dir
 build CMakeFiles/ex2.dir/src/main.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/main.cpp || cmake_object_order_depends_target_ex2
   DEP_FILE = CMakeFiles/ex2.dir/src/main.cpp.o.d
   FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/src
+  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/include
+  OBJECT_DIR = CMakeFiles/ex2.dir
+  OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
+
+build CMakeFiles/ex2.dir/src/thread.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/thread.cpp || cmake_object_order_depends_target_ex2
+  DEP_FILE = CMakeFiles/ex2.dir/src/thread.cpp.o.d
+  FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/include
+  OBJECT_DIR = CMakeFiles/ex2.dir
+  OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
+
+build CMakeFiles/ex2.dir/src/thread_manager.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/thread_manager.cpp || cmake_object_order_depends_target_ex2
+  DEP_FILE = CMakeFiles/ex2.dir/src/thread_manager.cpp.o.d
+  FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/include
   OBJECT_DIR = CMakeFiles/ex2.dir
   OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
 
 build CMakeFiles/ex2.dir/src/uthreads.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/uthreads.cpp || cmake_object_order_depends_target_ex2
   DEP_FILE = CMakeFiles/ex2.dir/src/uthreads.cpp.o.d
   FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/src
-  OBJECT_DIR = CMakeFiles/ex2.dir
-  OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
-
-build CMakeFiles/ex2.dir/src/Thread.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/Thread.cpp || cmake_object_order_depends_target_ex2
-  DEP_FILE = CMakeFiles/ex2.dir/src/Thread.cpp.o.d
-  FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/src
-  OBJECT_DIR = CMakeFiles/ex2.dir
-  OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
-
-build CMakeFiles/ex2.dir/src/ThreadManager.cpp.o: CXX_COMPILER__ex2_Release /cygdrive/d/eliav/CLionProjects/OS2/ex2/src/ThreadManager.cpp || cmake_object_order_depends_target_ex2
-  DEP_FILE = CMakeFiles/ex2.dir/src/ThreadManager.cpp.o.d
-  FLAGS = -O3 -fdiagnostics-color=always -std=gnu++11
-  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/src
+  INCLUDES = -I/cygdrive/d/eliav/CLionProjects/OS2/ex2/include
   OBJECT_DIR = CMakeFiles/ex2.dir
   OBJECT_FILE_DIR = CMakeFiles/ex2.dir/src
 
@@ -85,7 +85,7 @@ build CMakeFiles/ex2.dir/src/ThreadManager.cpp.o: CXX_COMPILER__ex2_Release /cyg
 #############################################
 # Link the executable ex2.exe
 
-build ex2.exe: CXX_EXECUTABLE_LINKER__ex2_Release CMakeFiles/ex2.dir/src/main.cpp.o CMakeFiles/ex2.dir/src/uthreads.cpp.o CMakeFiles/ex2.dir/src/Thread.cpp.o CMakeFiles/ex2.dir/src/ThreadManager.cpp.o
+build ex2.exe: CXX_EXECUTABLE_LINKER__ex2_Release CMakeFiles/ex2.dir/src/main.cpp.o CMakeFiles/ex2.dir/src/thread.cpp.o CMakeFiles/ex2.dir/src/thread_manager.cpp.o CMakeFiles/ex2.dir/src/uthreads.cpp.o
   FLAGS = -O3
   LINK_FLAGS = -Wl,--enable-auto-import
   OBJECT_DIR = CMakeFiles/ex2.dir
