@@ -1,6 +1,7 @@
 #include <vector>
 #include <setjmp.h>
-#include "Thread.cpp"  // Include the Thread class directly
+
+class Thread;
 
 class ThreadManager {
  public:
